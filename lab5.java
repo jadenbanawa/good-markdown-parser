@@ -7,6 +7,6 @@ public class lab5{
     @Test
     public void failedTest(){
 
-        assertEquals(2+2, 5);
+        assertEquals(2+2, 4);
     }
 }
