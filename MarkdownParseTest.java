@@ -69,11 +69,12 @@ public class MarkdownParseTest {
 
     @Test
     public void Test6() throws IOException{
-        List expected = List.of("page.com");
+        List expected = List.of();
 
-        Path fileName = Path.of("test-file6.md");
+        MarkdownParse mpObj = new MarkdownParse();
+        Path fileName = Path.of("/Users/Jaden/Documents/GitHub/good-markdown-parser/test-file6.md");
         String content = Files.readString(fileName);
-        ArrayList<String> actual = MarkdownParse.getLinks(content);
+        ArrayList<String> actual = mpObj.getLinks(content);
 
         assertEquals(expected, actual);
     }
